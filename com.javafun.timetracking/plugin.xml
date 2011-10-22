@@ -10,7 +10,7 @@
             id="com.javafun.core.Application">
       </entrypoint>
       <entrypoint
-            class="com.javafun.timetracking.ui.entrypoints.Settings"
+            class="com.javafun.timetracking.entrypoints.Settings"
             id="com.javafun.core.Settings"
             parameter="settings">
       </entrypoint>
@@ -23,7 +23,7 @@
             id="com.javafun.core.perspective">
       </perspective>
 <perspective
-            class="com.javafun.core.ui.perspective.PerspectiveSettings"
+            class="com.javafun.timetracking.ui.perspective.PerspectiveSettings"
             id="com.javafun.core.perspective.settings"
             name="Settings">
       </perspective>
@@ -87,7 +87,7 @@
       </command>
 <command
             categoryId="com.javafun.core.category"
-            defaultHandler="com.javafun.core.ui.command.RefreshAction"
+            defaultHandler="com.javafun.timetracking.ui.command.RefreshAction"
             id="com.javafun.core.refresh"
             name="Refresh">
       </command>
