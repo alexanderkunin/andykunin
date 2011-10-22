@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Main
+Bundle-SymbolicName: com.javafun.timetracking;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.javafun.timetracking.internal.Activator
+Require-Bundle: org.eclipse.rap.ui,
+ org.eclipse.rap.rwt.theme.classic;bundle-version="1.4.0",
+ com.javafun.utils,
+ org.apache.log4j;bundle-version="1.2.16",
+ org.hibernate;bundle-version="3.6.1",
+ org.eclipse.equinox.security
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: javax.servlet;version="2.4.0",
+ javax.servlet.http;version="2.4.0"

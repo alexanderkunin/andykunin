@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.rap.ui.entrypoint">
+      <entrypoint
+            class="com.javafun.timetracking.ui.Application"
+            parameter="main"
+            id="com.javafun.core.Application">
+      </entrypoint>
+      <entrypoint
+            class="com.javafun.timetracking.ui.entrypoints.Settings"
+            id="com.javafun.core.Settings"
+            parameter="settings">
+      </entrypoint>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Time Tracking"
+            class="com.javafun.timetracking.ui.perspective.Perspective"
+            id="com.javafun.core.perspective">
+      </perspective>
+<perspective
+            class="com.javafun.core.ui.perspective.PerspectiveSettings"
+            id="com.javafun.core.perspective.settings"
+            name="Settings">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="true"
+            name="Message"
+            icon="icons/sample2.gif"
+            class="com.javafun.timetracking.ui.view.View"
+            id="com.javafun.core.view">
+      </view>
+      <view
+            name="Mailboxes"
+            icon="icons/sample3.gif"
+            class="com.javafun.timetracking.ui.view.NavigationView"
+            id="com.javafun.core.navigationView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="com.javafun.core.category"
+            name="name">
+      </category>
+<view
+            category="com.javafun.core.category1"
+            class="com.javafun.core.ViewPart1"
+            id="com.javafun.core.view1"
+            name="name"
+            restorable="true">
+         <description>
+            description body text
+         </description>
+      </view>
+      <stickyView
+            closeable="false"
+            id="com.javafun.core.view1"
+            location="RIGHT"
+            moveable="false">
+      </stickyView>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="com.javafun.core.category"
+            name="name">
+      </category>
+      <command
+            name="Open Mailbox"
+            description="Opens a mailbox"
+            categoryId="com.javafun.core.category"
+            id="com.javafun.core.open">
+      </command>
+      <command
+            name="Login"
+            description="Login"
+            categoryId="com.javafun.core.category"
+            id="com.javafun.core.login">
+      </command>
+<command
+            categoryId="com.javafun.core.category"
+            defaultHandler="com.javafun.core.ui.command.RefreshAction"
+            id="com.javafun.core.refresh"
+            name="Refresh">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.rap.ui.branding">
+      <branding
+            servletName="main"
+            themeId="org.eclipse.rap.rwt.theme.classic"
+            defaultEntrypointId="com.javafun.core.Application"
+            title="RAP Application"
+            id="com.javafun.core.branding">
+         <presentationFactory
+               defaultLayoutId="org.eclipse.rap.design.example.business.layout"
+               name="Business PresentationFactory"
+               id="org.eclipse.ui.presentations.default">
+            <defaultStackPresentation
+                  id="org.eclipse.rap.design.example.stack.view">
+            </defaultStackPresentation>
+         </presentationFactory>
+      </branding>
+      <branding
+            defaultEntrypointId="com.javafun.core.Settings"
+            id="com.javafun.core.branding.settings"
+            servletName="settings"
+            themeId="org.eclipse.rap.rwt.theme.classic"
+            title="Settings">
+         <presentationFactory
+               defaultLayoutId="org.eclipse.rap.design.example.business.layout"
+               id="org.eclipse.ui.presentations.default"
+               name="Business PresentationFactory">
+            <defaultStackPresentation
+                  id="org.eclipse.rap.design.example.stack.view">
+            </defaultStackPresentation>
+         </presentationFactory>
+      </branding>
+   </extension>
+   <extension
+         id="timetrackingLoginModule"
+         point="org.eclipse.equinox.security.loginModule">
+      <loginModule
+            class="com.javafun.timetracking.security.TimetrackingLoginModule"
+            description="Timetracking Login Module">
+      </loginModule>
+   </extension>
+   <extension
+         point="org.eclipse.equinox.security.callbackHandlerMapping">
+      <callbackHandlerMapping
+            callbackHandlerId="com.javafun.timetracking.timetrackingCallbackHandler"
+            configName="TIMETRACKING">
+      </callbackHandlerMapping>
+   </extension>
+   <extension
+         id="timetrackingCallbackHandler"
+         point="org.eclipse.equinox.security.callbackHandler">
+      <callbackHandler
+            class="com.javafun.timetracking.security.TimetrackingCallbackHandler">
+      </callbackHandler>
+   </extension>>
+</plugin>

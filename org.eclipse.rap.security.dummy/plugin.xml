@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="dummyLoginModule"
+         point="org.eclipse.equinox.security.loginModule">
+      <loginModule
+            class="org.eclipse.rap.security.dummy.DummyLoginModule"
+            description="Dummy LoginModule">
+      </loginModule>
+   </extension>
+   <extension
+         id="dummyCallbackHandler"
+         point="org.eclipse.equinox.security.callbackHandler">
+      <callbackHandler
+            class="org.eclipse.rap.security.dummy.DummyCallbackHandler">
+      </callbackHandler>
+   </extension>
+   <extension
+         point="org.eclipse.equinox.security.callbackHandlerMapping">
+      <callbackHandlerMapping
+            callbackHandlerId="org.eclipse.rap.security.dummy.dummyCallbackHandler"
+            configName="DUMMY">
+      </callbackHandlerMapping>
+   </extension>
+
+</plugin>

@@ -1,0 +1,11 @@
+TIMETRACKING {
+    org.eclipse.equinox.security.auth.module.ExtensionLoginModule required
+        extensionId="com.javafun.timetracking.timetrackingLoginModule";
+
+};
+
+UNIX {
+    org.eclipse.equinox.security.auth.module.ExtensionLoginModule required
+        extensionId="org.eclipse.rap.security.demo.unixLoginModule";
+
+};

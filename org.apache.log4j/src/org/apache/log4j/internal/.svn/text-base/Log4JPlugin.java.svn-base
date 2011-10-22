@@ -1,0 +1,33 @@
+package org.apache.log4j.internal;
+
+import java.net.URL;
+
+import org.apache.log4j.PropertyConfigurator;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Platform;
+import org.eclipse.core.runtime.Plugin;
+import org.osgi.framework.BundleContext;
+
+/**
+ * This plugin class initializes the Log4J system wehn the plugin is started. A
+ * log4j.properties file is expected to be found in the plugin directory. The
+ * default log4j.properties file is configured to write log messages to a
+ * WorkspaceAppender.
+ * 
+ * @author ted stockwell
+ */
+public class Log4JPlugin extends Plugin {
+
+    /**
+     * The constructor.
+     */
+    public Log4JPlugin() {
+    }
+
+    public void start(BundleContext context) throws Exception {
+        super.start(context);
+        URL url = Platform.find(context.getBundle(), new Path("log4j.properties"));
+        PropertyConfigurator.configure(url);
+    }
+
+}

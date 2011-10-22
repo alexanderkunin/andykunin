@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Utils
+Bundle-SymbolicName: com.javafun.utils
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: javafun.utils.internal.Activator
+Require-Bundle: org.apache.log4j;bundle-version="1.2.13",
+ org.mysql,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: javafun.utils,
+ javafun.utils.jdbc,
+ javafun.utils.logging
+Bundle-ClassPath: bin/,
+ library.jar

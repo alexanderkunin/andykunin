@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.mysql
+Bundle-SymbolicName: org.mysql;singleton:=true
+Bundle-Version: 5.1.15
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: bin/,
+ library/mysql-connector-java-5.1.15-bin.jar,
+ library/proxool-0.9.1.jar,
+ library/proxool-cglib.jar
+Export-Package: com.mysql.jdbc,
+ com.mysql.jdbc.exceptions,
+ com.mysql.jdbc.jdbc2.optional,
+ com.mysql.jdbc.log,
+ com.mysql.jdbc.util,
+ org.gjt.mm.mysql,
+ org.logicalcobwebs.proxool,
+ org.mysql
+Require-Bundle: org.eclipse.core.runtime,
+ org.apache.log4j;bundle-version="1.2.16",
+ org.apache.commons;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: org.mysql.Activator
+Eclipse-RegisterBuddy: org.apache.log4j
+

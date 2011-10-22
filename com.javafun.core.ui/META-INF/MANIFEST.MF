@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: UI
+Bundle-SymbolicName: com.javafun.core.ui
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.javafun.core.ui.internal.Activator
+Bundle-Vendor: JAVAFUN
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.rap.ui;bundle-version="1.4.0",
+ com.javafun.utils;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
