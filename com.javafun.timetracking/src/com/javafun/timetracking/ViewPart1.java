@@ -1,4 +1,4 @@
-package com.javafun.core;
+package com.javafun.timetracking;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;

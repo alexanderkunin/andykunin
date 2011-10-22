@@ -1,4 +1,4 @@
-package com.javafun.core.ui.action;
+package com.javafun.timetracking.ui.action;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,9 +13,9 @@ import org.eclipse.rwt.RWT;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
-import com.javafun.core.model.User;
-import com.javafun.core.ui.ICommandIds;
-import com.javafun.core.ui.dialog.LoginDialog;
+import com.javafun.timetracking.model.User;
+import com.javafun.timetracking.ui.ICommandIds;
+import com.javafun.timetracking.ui.dialog.LoginDialog;
 
 /**
  * When run, this action will show a message dialog.

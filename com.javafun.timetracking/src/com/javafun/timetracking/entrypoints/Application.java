@@ -1,11 +1,11 @@
-package com.javafun.core.entrypoints;
+package com.javafun.timetracking.entrypoints;
 
 import org.eclipse.rwt.lifecycle.IEntryPoint;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.application.WorkbenchAdvisor;
 
-import com.javafun.core.ui.ApplicationWorkbenchAdvisor;
+import com.javafun.timetracking.ui.ApplicationWorkbenchAdvisor;
 
 /**
  * This class controls all aspects of the application's execution
@@ -13,9 +13,9 @@ import com.javafun.core.ui.ApplicationWorkbenchAdvisor;
  */
 public class Application implements IEntryPoint {
 
-  public int createUI() {
-    Display display = PlatformUI.createDisplay();
-    WorkbenchAdvisor advisor = new ApplicationWorkbenchAdvisor();
-    return PlatformUI.createAndRunWorkbench( display, advisor );
-  }
+    public int createUI() {
+        Display display = PlatformUI.createDisplay();
+        WorkbenchAdvisor advisor = new ApplicationWorkbenchAdvisor();
+        return PlatformUI.createAndRunWorkbench(display, advisor);
+    }
 }

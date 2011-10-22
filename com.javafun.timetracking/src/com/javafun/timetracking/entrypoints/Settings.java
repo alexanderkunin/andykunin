@@ -1,14 +1,14 @@
 /**
  * 
  */
-package com.javafun.core.entrypoints;
+package com.javafun.timetracking.entrypoints;
 
 import org.eclipse.rwt.lifecycle.IEntryPoint;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.application.WorkbenchAdvisor;
 
-import com.javafun.core.ui.SettingsWorkbenchAdvisor;
+import com.javafun.timetracking.ui.SettingsWorkbenchAdvisor;
 
 /**
  * @author Alexander Kunin

@@ -1,4 +1,4 @@
-package com.javafun.core.ui;
+package com.javafun.timetracking.ui;
 
 public final class TimetrackingConstants {
 

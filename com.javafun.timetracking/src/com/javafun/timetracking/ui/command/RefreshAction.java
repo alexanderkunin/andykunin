@@ -1,4 +1,4 @@
-package com.javafun.core.ui.command;
+package com.javafun.timetracking.ui.command;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;

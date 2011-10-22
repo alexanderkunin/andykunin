@@ -1,6 +1,5 @@
 package com.javafun.timetracking.ui;
 
-
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.GroupMarker;
 import org.eclipse.jface.action.IAction;
@@ -19,7 +18,7 @@ import org.eclipse.ui.actions.ActionFactory.IWorkbenchAction;
 import org.eclipse.ui.application.ActionBarAdvisor;
 import org.eclipse.ui.application.IActionBarConfigurer;
 
-import com.javafun.timetracking.ui.action.LoginPopupAction;
+import com.javafun.timetracking.ui.action.LoginAction;
 import com.javafun.timetracking.ui.action.OpenViewAction;
 import com.javafun.timetracking.ui.view.View;
 
@@ -37,12 +36,11 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
     private IAction aboutAction;
     private OpenViewAction openViewAction;
     private Action messagePopupAction;
-    
 
     public ApplicationActionBarAdvisor(IActionBarConfigurer configurer) {
         super(configurer);
     }
-    
+
     protected void makeActions(final IWorkbenchWindow window) {
         // Creates the actions and registers them.
         // Registering is needed to ensure that key bindings work.
@@ -52,39 +50,39 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 
         exitAction = ActionFactory.QUIT.create(window);
         register(exitAction);
-        
+
         aboutAction = new AboutAction(window);
         register(aboutAction);
-        
+
         openViewAction = new OpenViewAction(window, "Open Another Message View", View.ID);
         register(openViewAction);
 
         messagePopupAction = new LoginAction("Login", window);
         register(messagePopupAction);
     }
-    
+
     protected void fillMenuBar(IMenuManager menuBar) {
         MenuManager fileMenu = new MenuManager("&File", IWorkbenchActionConstants.M_FILE);
         MenuManager helpMenu = new MenuManager("&Help", IWorkbenchActionConstants.M_HELP);
-        
+
         menuBar.add(fileMenu);
         // Add a group marker indicating where action set menus will appear.
         menuBar.add(new GroupMarker(IWorkbenchActionConstants.MB_ADDITIONS));
         menuBar.add(helpMenu);
-        
+
         // File
         fileMenu.add(messagePopupAction);
         fileMenu.add(openViewAction);
         fileMenu.add(new Separator());
         fileMenu.add(exitAction);
-        
+
         // Help
         helpMenu.add(aboutAction);
     }
-    
+
     protected void fillCoolBar(ICoolBarManager coolBar) {
         IToolBarManager toolbar = new ToolBarManager(SWT.FLAT | SWT.RIGHT);
-        coolBar.add(new ToolBarContributionItem(toolbar, "main"));   
+        coolBar.add(new ToolBarContributionItem(toolbar, "main"));
         toolbar.add(openViewAction);
         toolbar.add(messagePopupAction);
     }

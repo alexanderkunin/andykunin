@@ -1,11 +1,10 @@
-package com.javafun.core.ui;
-
+package com.javafun.timetracking.ui;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
-import com.javafun.core.ui.TimetrackingConstants.Plugins;
+import com.javafun.timetracking.ui.ApplicationConstants.Plugins;
 
 /**
  * The activator class controls the plug-in life cycle

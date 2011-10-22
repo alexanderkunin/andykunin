@@ -1,4 +1,4 @@
-package com.javafun.core.ui;
+package com.javafun.timetracking.ui;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.GroupMarker;
@@ -18,9 +18,9 @@ import org.eclipse.ui.actions.ActionFactory.IWorkbenchAction;
 import org.eclipse.ui.application.ActionBarAdvisor;
 import org.eclipse.ui.application.IActionBarConfigurer;
 
-import com.javafun.core.ui.action.LoginAction;
-import com.javafun.core.ui.action.OpenViewAction;
-import com.javafun.core.ui.view.View;
+import com.javafun.timetracking.ui.action.LoginAction;
+import com.javafun.timetracking.ui.action.OpenViewAction;
+import com.javafun.timetracking.ui.view.View;
 
 /**
  * An action bar advisor is responsible for creating, adding, and disposing of the

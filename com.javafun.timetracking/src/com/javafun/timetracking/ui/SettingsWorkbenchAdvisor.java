@@ -1,4 +1,4 @@
-package com.javafun.core.ui;
+package com.javafun.timetracking.ui;
 
 import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
 import org.eclipse.ui.application.WorkbenchAdvisor;

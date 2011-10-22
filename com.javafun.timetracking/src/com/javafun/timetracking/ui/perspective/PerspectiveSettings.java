@@ -1,11 +1,11 @@
-package com.javafun.core.ui.perspective;
+package com.javafun.timetracking.ui.perspective;
 
 import org.eclipse.ui.IFolderLayout;
 import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
 
-import com.javafun.core.ui.view.NavigationView;
-import com.javafun.core.ui.view.View;
+import com.javafun.timetracking.ui.view.NavigationView;
+import com.javafun.timetracking.ui.view.View;
 
 /**
  * Configures the perspective layout. This class is contributed through the
