@@ -5,9 +5,9 @@
    <extension
          point="org.eclipse.rap.ui.entrypoint">
       <entrypoint
-            class="com.javafun.timetracking.ui.Application"
-            parameter="main"
-            id="com.javafun.core.Application">
+            class="com.javafun.timetracking.entrypoints.Application"
+            id="com.javafun.core.Application"
+            parameter="main">
       </entrypoint>
       <entrypoint
             class="com.javafun.timetracking.entrypoints.Settings"
@@ -23,7 +23,7 @@
             id="com.javafun.core.perspective">
       </perspective>
 <perspective
-            class="com.javafun.timetracking.ui.perspective.PerspectiveSettings"
+            class="com.javafun.timetracking.ui.perspective.SettingsPerspective"
             id="com.javafun.core.perspective.settings"
             name="Settings">
       </perspective>
@@ -38,9 +38,9 @@
             id="com.javafun.core.view">
       </view>
       <view
-            name="Mailboxes"
-            icon="icons/sample3.gif"
-            class="com.javafun.timetracking.ui.view.NavigationView"
+            name="Settings"
+            icon="icons/settings.jpg"
+            class="com.javafun.timetracking.ui.view.SettinsNavigationView"
             id="com.javafun.core.navigationView">
       </view>
    </extension>
@@ -95,11 +95,12 @@
    <extension
          point="org.eclipse.rap.ui.branding">
       <branding
+            defaultEntrypointId="com.javafun.core.Application"
+            exitConfirmationClass="com.javafun.timetracking.entrypoints.ExitConfirmation"
+            id="com.javafun.core.branding"
             servletName="main"
             themeId="org.eclipse.rap.rwt.theme.classic"
-            defaultEntrypointId="com.javafun.core.Application"
-            title="RAP Application"
-            id="com.javafun.core.branding">
+            title="Time Tracking">
          <presentationFactory
                defaultLayoutId="org.eclipse.rap.design.example.business.layout"
                name="Business PresentationFactory"
@@ -111,6 +112,7 @@
       </branding>
       <branding
             defaultEntrypointId="com.javafun.core.Settings"
+            exitConfirmationClass="com.javafun.timetracking.entrypoints.ExitConfirmation"
             id="com.javafun.core.branding.settings"
             servletName="settings"
             themeId="org.eclipse.rap.rwt.theme.classic"
@@ -141,10 +143,24 @@
       </callbackHandlerMapping>
    </extension>
    <extension
-         id="timetrackingCallbackHandler"
+         id="com.javafun.timetracking.timetrackingCallbackHandler"
          point="org.eclipse.equinox.security.callbackHandler">
       <callbackHandler
             class="com.javafun.timetracking.security.TimetrackingCallbackHandler">
       </callbackHandler>
    </extension>>
+   <extension
+      point="org.eclipse.equinox.http.registry.resources">
+   <resource
+         alias="/welcomepage"
+         base-name="/html/index.html">
+   </resource>
+</extension>
+<extension
+      point="org.eclipse.equinox.http.registry.servlets">
+   <servlet
+         alias="/"
+         class="com.javafun.timetracking.servlet.WelcomePageServlet">
+   </servlet>
+</extension>
 </plugin>
