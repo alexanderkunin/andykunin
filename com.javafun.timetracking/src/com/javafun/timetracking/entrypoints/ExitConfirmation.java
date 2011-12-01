@@ -12,28 +12,28 @@ import org.eclipse.rwt.RWT;
  */
 public class ExitConfirmation implements IExitConfirmation {
 
-	public ExitConfirmation() {
-		System.out.println("ExitConfirmation.ExitConfirmation()");
-	}
+    public ExitConfirmation() {
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.eclipse.rap.ui.branding.IExitConfirmation#showExitConfirmation()
-	 */
-	@Override
-	public boolean showExitConfirmation() {
-		return RWT.getSessionStore().getHttpSession().getAttribute("user") != null;
-	}
+    }
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * org.eclipse.rap.ui.branding.IExitConfirmation#getExitConfirmationText()
-	 */
-	@Override
-	public String getExitConfirmationText() {
-		return "The application will be closed.";
-	}
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.eclipse.rap.ui.branding.IExitConfirmation#showExitConfirmation()
+     */
+    @Override
+    public boolean showExitConfirmation() {
+        return RWT.getSessionStore().getHttpSession().getAttribute("user") != null;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * org.eclipse.rap.ui.branding.IExitConfirmation#getExitConfirmationText()
+     */
+    @Override
+    public String getExitConfirmationText() {
+        return "The application will be closed.";
+    }
 }
