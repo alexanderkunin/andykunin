@@ -2,8 +2,6 @@ package com.javafun.core.ui.internal;
 
 import javafun.utils.StringUtils;
 
-import javax.accessibility.Accessible;
-
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.FocusAdapter;
@@ -16,9 +14,6 @@ import org.eclipse.swt.events.KeyListener;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.events.MouseListener;
-import org.eclipse.swt.events.MouseMoveListener;
-import org.eclipse.swt.events.MouseTrackListener;
-import org.eclipse.swt.events.PaintListener;
 import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.events.TraverseListener;
 import org.eclipse.swt.events.VerifyListener;
@@ -236,21 +231,21 @@ public class StringControl extends Composite {
         _text.clearSelection();
     }
 
-    public void copy() {
-        _text.copy();
-    }
-
-    public void cut() {
-        _text.cut();
-    }
-
-    public int getCaretLineNumber() {
-        return _text.getCaretLineNumber();
-    }
-
-    public Point getCaretLocation() {
-        return _text.getCaretLocation();
-    }
+    //    public void copy() {
+    //        _text.copy();
+    //    }
+    //
+    //    public void cut() {
+    //        _text.cut();
+    //    }
+    //
+    //    public int getCaretLineNumber() {
+    //        return _text.getCaretLineNumber();
+    //    }
+    //
+    //    public Point getCaretLocation() {
+    //        return _text.getCaretLocation();
+    //    }
 
     public int getCaretPosition() {
         return _text.getCaretPosition();
@@ -260,9 +255,9 @@ public class StringControl extends Composite {
         return _text.getCharCount();
     }
 
-    public boolean getDoubleClickEnabled() {
-        return _text.getDoubleClickEnabled();
-    }
+    //    public boolean getDoubleClickEnabled() {
+    //        return _text.getDoubleClickEnabled();
+    //    }
 
     public char getEchoChar() {
         return _text.getEchoChar();
@@ -272,9 +267,9 @@ public class StringControl extends Composite {
         return _text.getEditable();
     }
 
-    public int getLineCount() {
-        return _text.getLineCount();
-    }
+    //    public int getLineCount() {
+    //        return _text.getLineCount();
+    //    }
 
     public String getLineDelimiter() {
         return _text.getLineDelimiter();
@@ -296,9 +291,9 @@ public class StringControl extends Composite {
         return _text.getSelectionText();
     }
 
-    public int getTabs() {
-        return _text.getTabs();
-    }
+    //    public int getTabs() {
+    //        return _text.getTabs();
+    //    }
 
     /**
      * Returns the widget text.
@@ -317,21 +312,21 @@ public class StringControl extends Composite {
         return _text.getTextLimit();
     }
 
-    public int getTopIndex() {
-        return _text.getTopIndex();
-    }
-
-    public int getTopPixel() {
-        return _text.getTopPixel();
-    }
+    //    public int getTopIndex() {
+    //        return _text.getTopIndex();
+    //    }
+    //
+    //    public int getTopPixel() {
+    //        return _text.getTopPixel();
+    //    }
 
     public void insert(String string) {
         _text.insert(string);
     }
 
-    public void paste() {
-        _text.paste();
-    }
+    //    public void paste() {
+    //        _text.paste();
+    //    }
 
     public void removeModifyListener(ModifyListener listener) {
         _text.removeModifyListener(listener);
@@ -349,9 +344,9 @@ public class StringControl extends Composite {
         _text.selectAll();
     }
 
-    public void setDoubleClickEnabled(boolean doubleClick) {
-        _text.setDoubleClickEnabled(doubleClick);
-    }
+    //    public void setDoubleClickEnabled(boolean doubleClick) {
+    //        _text.setDoubleClickEnabled(doubleClick);
+    //    }
 
     public void setEchoChar(char echo) {
         _text.setEchoChar(echo);
@@ -383,9 +378,9 @@ public class StringControl extends Composite {
         _text.setSelection(selection);
     }
 
-    public void setTabs(int tabs) {
-        _text.setTabs(tabs);
-    }
+    //    public void setTabs(int tabs) {
+    //        _text.setTabs(tabs);
+    //    }
 
     //    public void setText(Money money) {
     //        setText(money != null ? FormatUtils.DECIMAL_FORMAT.format(money) : null);
@@ -419,13 +414,13 @@ public class StringControl extends Composite {
         _text.setTextLimit(limit);
     }
 
-    public void setTopIndex(int index) {
-        _text.setTopIndex(index);
-    }
-
-    public void showSelection() {
-        _text.showSelection();
-    }
+    //    public void setTopIndex(int index) {
+    //        _text.setTopIndex(index);
+    //    }
+    //
+    //    public void showSelection() {
+    //        _text.showSelection();
+    //    }
 
     // ///////////////////////////////////////////////////////
     //
@@ -452,20 +447,20 @@ public class StringControl extends Composite {
         _text.addMouseListener(listener);
     }
 
-    @Override
-    public void addMouseTrackListener(MouseTrackListener listener) {
-        _text.addMouseTrackListener(listener);
-    }
+    //    @Override
+    //    public void addMouseTrackListener(MouseTrackListener listener) {
+    //        _text.addMouseTrackListener(listener);
+    //    }
+    //
+    //    @Override
+    //    public void addMouseMoveListener(MouseMoveListener listener) {
+    //        _text.addMouseMoveListener(listener);
+    //    }
 
-    @Override
-    public void addMouseMoveListener(MouseMoveListener listener) {
-        _text.addMouseMoveListener(listener);
-    }
-
-    @Override
-    public void addPaintListener(PaintListener listener) {
-        _text.addPaintListener(listener);
-    }
+    //    @Override
+    //    public void addPaintListener(PaintListener listener) {
+    //        _text.addPaintListener(listener);
+    //    }
 
     @Override
     public void addTraverseListener(TraverseListener listener) {
@@ -487,10 +482,10 @@ public class StringControl extends Composite {
         return _text.forceFocus();
     }
 
-    @Override
-    public Accessible getAccessible() {
-        return _text.getAccessible();
-    }
+    //    @Override
+    //    public Accessible getAccessible() {
+    //        return _text.getAccessible();
+    //    }
 
     @Override
     public Color getBackground() {
@@ -541,25 +536,25 @@ public class StringControl extends Composite {
         _text.removeKeyListener(listener);
     }
 
-    @Override
-    public void removeMouseTrackListener(MouseTrackListener listener) {
-        _text.removeMouseTrackListener(listener);
-    }
+    //    @Override
+    //    public void removeMouseTrackListener(MouseTrackListener listener) {
+    //        _text.removeMouseTrackListener(listener);
+    //    }
 
     @Override
     public void removeMouseListener(MouseListener listener) {
         _text.removeMouseListener(listener);
     }
 
-    @Override
-    public void removeMouseMoveListener(MouseMoveListener listener) {
-        _text.removeMouseMoveListener(listener);
-    }
+    //    @Override
+    //    public void removeMouseMoveListener(MouseMoveListener listener) {
+    //        _text.removeMouseMoveListener(listener);
+    //    }
 
-    @Override
-    public void removePaintListener(PaintListener listener) {
-        _text.removePaintListener(listener);
-    }
+    //    @Override
+    //    public void removePaintListener(PaintListener listener) {
+    //        _text.removePaintListener(listener);
+    //    }
 
     @Override
     public void removeTraverseListener(TraverseListener listener) {
@@ -573,10 +568,10 @@ public class StringControl extends Composite {
         }
     }
 
-    @Override
-    public void setCapture(boolean capture) {
-        _text.setCapture(capture);
-    }
+    //    @Override
+    //    public void setCapture(boolean capture) {
+    //        _text.setCapture(capture);
+    //    }
 
     @Override
     public void setCursor(Cursor cursor) {
@@ -607,10 +602,10 @@ public class StringControl extends Composite {
         _text.setToolTipText(string);
     }
 
-    @Override
-    public boolean traverse(int traversal) {
-        return _text.traverse(traversal);
-    }
+    //    @Override
+    //    public boolean traverse(int traversal) {
+    //        return _text.traverse(traversal);
+    //    }
 
     public boolean isRequired() {
         return _required;
