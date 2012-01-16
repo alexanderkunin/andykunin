@@ -111,9 +111,10 @@
       </branding>
       <branding
             defaultEntrypointId="com.javafun.core.Settings"
+            exitConfirmationClass="com.javafun.timetracking.entrypoints.ExitConfirmation"
             id="com.javafun.core.branding.settings"
             servletName="settings"
-            themeId="org.eclipse.rap.rwt.theme.classic"
+            themeId="org.eclipse.rap.design.example.business.theme"
             title="Settings">
          <presentationFactory
                defaultLayoutId="org.eclipse.rap.design.example.business.layout"
