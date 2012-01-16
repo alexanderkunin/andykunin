@@ -26,7 +26,7 @@
 <booleanAttribute key="org.eclipse.rap.launch.openBrowser" value="false"/>
 <intAttribute key="org.eclipse.rap.launch.port" value="8888"/>
 <stringAttribute key="org.eclipse.rap.launch.servletName" value="main"/>
-<intAttribute key="org.eclipse.rap.launch.sessionTimeout" value="20"/>
+<intAttribute key="org.eclipse.rap.launch.sessionTimeout" value="90"/>
 <booleanAttribute key="org.eclipse.rap.launch.terminatePrevious" value="true"/>
 <booleanAttribute key="org.eclipse.rap.launch.useDefaultDataLocation" value="true"/>
 <booleanAttribute key="org.eclipse.rap.launch.useManualContextPath" value="false"/>
